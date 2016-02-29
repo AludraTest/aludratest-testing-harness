@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2010-2014 Hamburg Sud and the contributors.
+ * Copyright (C) 2015 Hamburg Sud and the contributors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -22,7 +22,6 @@ import java.util.Properties;
 
 import org.aludratest.AludraTest;
 import org.aludratest.config.AludraTestConfig;
-import org.aludratest.config.impl.AludraTestingTestConfigImpl;
 import org.aludratest.impl.log4testing.Log4TestingRunnerListener;
 import org.aludratest.log4testing.config.AbbreviatorConfiguration;
 import org.aludratest.log4testing.config.Log4TestingConfiguration;
@@ -30,8 +29,9 @@ import org.aludratest.log4testing.config.TestLogWriterConfiguration;
 import org.aludratest.log4testing.config.TestStepFilterConfiguration;
 import org.aludratest.scheduler.RunnerListener;
 import org.aludratest.scheduler.RunnerListenerRegistry;
-import org.aludratest.service.util.TestRunnerListenerRegistryImpl;
+import org.aludratest.testing.config.AludraTestingTestConfigImpl;
 import org.aludratest.testing.util.MemoryTestLog;
+import org.aludratest.testing.util.TestRunnerListenerRegistryImpl;
 import org.codehaus.plexus.util.ReflectionUtils;
 import org.junit.After;
 import org.junit.Assert;
