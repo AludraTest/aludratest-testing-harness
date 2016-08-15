@@ -50,7 +50,7 @@ public abstract class AbstractAludraServiceTest {
 
     private TestStatus status;
 
-    private AludraTest framework;
+    protected AludraTest framework;
 
     @Before
     public void prepareTestCase() {
@@ -87,6 +87,7 @@ public abstract class AbstractAludraServiceTest {
 
     @SuppressWarnings("unchecked")
     public <T extends AludraService, U extends T> U getLoggingService(Class<T> interfaceClass, String moduleName) {
+    	// TODO FAL check why framework is called to create new service but retval is taken form context (old service instance) 
         framework.getServiceManager().createAndConfigureService(ComponentId.create(interfaceClass, moduleName), context, true);
         U service = (U) this.context.getService(ComponentId.create(interfaceClass, moduleName));
         return service;
